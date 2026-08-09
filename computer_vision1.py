@@ -1,0 +1,13 @@
+import cv2
+img=cv2.imread("300mph.png")
+res1=cv2.resize(img,(200,200))
+res2=cv2.resize(img,(400,400))
+res3=cv2.resize(img,(600,600))
+cv2.imshow("Original Image",img)
+cv2.imshow("Resized Image 1",res1)
+cv2.imshow("Resized Image 2",res2)
+cv2.imshow("Resized Image 3",res3)
+cv2.imwrite("input_image_small.png",res1)
+cv2.imwrite("input_image_medium.png",res2)
+cv2.imwrite("input_image_large.png",res3)
+cv2.waitKey(0)
