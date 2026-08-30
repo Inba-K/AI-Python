@@ -1,8 +1,9 @@
 import cv2
 img=cv2.imread("300mph.png")
-cv2.arrowedLine(img,(100,100),(800,800),(100,255,255),4,4)
-cv2.arrowedLine(img,(800,800),(100,100),(100,255,255),4,4)
-cv2.imshow("300mph.png",img)
-cv2.imwrite("mod_300mph.png",img)
+res=cv2.resize(img,(1150,600))
+cv2.arrowedLine(res,(0,300),(1150,300),(0,255,0),4,4)
+cv2.arrowedLine(res,(1150,300),(0,300),(0,255,0),4,4)
+cv2.putText(res,"1150 pixels",(480,310),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2)
+cv2.imshow("300mph.png",res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
